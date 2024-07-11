@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ppf.coursesellingsystembackend.mapper.CourseMapper">
+
+    <resultMap id="BaseResultMap" type="com.ppf.coursesellingsystembackend.model.entity.Course">
+            <id property="id" column="id" jdbcType="BIGINT"/>
+            <result property="courseName" column="courseName" jdbcType="VARCHAR"/>
+            <result property="url" column="url" jdbcType="VARCHAR"/>
+            <result property="value" column="value" jdbcType="DOUBLE"/>
+            <result property="type" column="type" jdbcType="TINYINT"/>
+            <result property="profile" column="profile" jdbcType="VARCHAR"/>
+            <result property="imgUrl" column="imgUrl" jdbcType="VARCHAR"/>
+            <result property="founder" column="founder" jdbcType="VARCHAR"/>
+            <result property="num" column="num" jdbcType="INTEGER"/>
+            <result property="createTime" column="createTime" jdbcType="TIMESTAMP"/>
+            <result property="updateTime" column="updateTime" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+        id,courseName,url,
+        value,type,profile,imgUrl,
+        founder,num,createTime,
+        updateTime,isDelete
+    </sql>
+</mapper>
